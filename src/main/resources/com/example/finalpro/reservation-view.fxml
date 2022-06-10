@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
@@ -19,9 +18,7 @@
             <Label layoutX="63.0" layoutY="119.0" text="Cena biletu" />
             <ListView fx:id="listOfAvailableChairs" layoutX="23.0" layoutY="175.0" prefHeight="200.0" prefWidth="200.0" />
             <Label layoutX="30.0" layoutY="147.0" text="Dostepne miejsca" />
-            <ChoiceBox fx:id="comboBox" layoutX="402.0" layoutY="262.0" prefHeight="24.0" prefWidth="136.0" />
-            <Label layoutX="402.0" layoutY="235.0" text="Typ rezerwacji" />
-            <Button fx:id="reserveScreening" layoutX="402.0" layoutY="298.0" mnemonicParsing="false" onAction="#reserveButtonHandler" prefHeight="47.0" prefWidth="136.0" text="Zarezerwuj seans" />
+            <Button fx:id="reserveScreening" layoutX="402.0" layoutY="298.0" mnemonicParsing="false" onAction="#reserveButtonHandler" prefHeight="47.0" prefWidth="136.0" text="Potwierdź seans" />
             <TextField fx:id="title" layoutX="133.0" layoutY="28.0" />
             <TextField fx:id="roomNo" layoutX="133.0" layoutY="60.0" />
             <TextField fx:id="dateOfScreening" layoutX="133.0" layoutY="88.0" />
