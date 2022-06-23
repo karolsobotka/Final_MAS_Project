@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="ac8219aa-43af-4c33-9249-e21eac6b158e" name="@localhost Mapping">
+      <data-sources db="0ea5a14f-f8e4-40fa-872f-31cdab484b9f" ddl="bcca18b9-3138-4d24-a54c-5c9033154dcb" />
+    </mapping>
+  </component>
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="bcca18b9-3138-4d24-a54c-5c9033154dcb" />
+          <option name="name" value="@localhost (DDL)" />
+          <option name="languageId" value="MySQL" />
+          <option name="urls">
+            <array />
+          </option>
+        </State>
+      </list>
+    </option>
+  </component>
+</project>

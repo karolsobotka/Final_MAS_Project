@@ -1,17 +1,16 @@
 package com.example.finalpro;
 
-public class Seans {
+public class Screening {
 
 
     private String dateFrom;
-    private String dateTo;
+
     private String name;
     private String room;
     private String availability;
 
-    public Seans(String dateFrom, String dateTo, String name, String room, String availability) {
+    public Screening(String dateFrom, String name, String room, String availability) {
         this.dateFrom = dateFrom;
-        this.dateTo = dateTo;
         this.name = name;
         this.room = room;
         this.availability = availability;

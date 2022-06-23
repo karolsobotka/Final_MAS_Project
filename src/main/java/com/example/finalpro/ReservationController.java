@@ -46,7 +46,7 @@ public class ReservationController implements Initializable {
     @FXML
     private TextField title;
 
-    Seans seans = HelloController.getSelectedSeans();
+    Screening screening = MovieController.getSelectedSeans();
     @FXML
     void reserveButtonHandler(){
         reserveScreening.setOnAction(e ->{
@@ -69,7 +69,7 @@ public class ReservationController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         availableChairsCount.setText("5");
-        title.setText(seans.getName());
+        title.setText(screening.getName());
         dateOfScreening.setText("18.06.2022");
         imgArea.setImage(new Image("C:\\Users\\WIN\\Desktop\\MAS\\PROJEKT\\FINAL\\src\\main\\resources\\Posters\\fightClub.jpg"));
         roomNo.setText("1");
