@@ -28,4 +28,8 @@ public abstract class Client extends Person {
         id.getAndIncrement();
         setEmail(email);
     }
+
+    public void confirmReservation(){
+
+    }
 }

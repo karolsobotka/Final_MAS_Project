@@ -4,38 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8bc4544f-48c1-4a5d-9c51-140e553c5692" name="Changes" comment="commit to sync up full progress">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0adf5310ee8c7942d1d7037f6bbe9cfaec0e2154" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/c/1c89a5491fbfda3fb050196d6a239f20200296e7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/f/1f1763f358c257ea3515417352b82b0165647ad1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/2/32e074f71d16c1e88ac02aa83592ca6ad1fd98a8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/d/5d837c4ed85ecaaf932c506e80ff5d7b9f3d590d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/7/8721c02ddaf636d07e7665a0a5131ac2daf84895" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqlDataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Manger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Movie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/MovieMarathon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Owner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/RegisteredClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/RegistrationState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Snacks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Ticket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/UnregisteredClient.java" afterDir="false" />
+    <list default="true" id="8bc4544f-48c1-4a5d-9c51-140e553c5692" name="Changes" comment="Adding all classes and assosiations between them still WIP">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0adf5310ee8c7942d1d7037f6bbe9cfaec0e2154" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/MovieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/RegistrationState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/ReservationState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Reservation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/ReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Seans.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Screening.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/finalpro/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/finalpro/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Screening.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Screening.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Snacks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Snacks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/UnregisteredClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/UnregisteredClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +62,7 @@
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="com.example.finalpro.HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.finalpro.HelloApplication" />
       <module name="FINAL" />
       <extension name="coverage">
@@ -109,7 +91,7 @@
       <updated>1654885554299</updated>
       <workItem from="1654885556191" duration="11982000" />
       <workItem from="1654905123226" duration="57000" />
-      <workItem from="1655828546736" duration="18979000" />
+      <workItem from="1655828546736" duration="21141000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit for Final Project for MAS classes.">
       <created>1654893447997</created>
@@ -132,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654905164390</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adding all classes and assosiations between them still WIP">
+      <created>1656016705232</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1656016705232</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +141,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit for Final Project for MAS classes." />
     <MESSAGE value="commit to sync up full progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit to sync up full progress" />
+    <MESSAGE value="Adding all classes and assosiations between them still WIP" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding all classes and assosiations between them still WIP" />
   </component>
 </project>

@@ -1,6 +1,6 @@
 package com.example.finalpro;
 
-public enum RegistrationState {
+public enum ReservationState {
     AVAILABLE,
     RESERVED,
     PAID
