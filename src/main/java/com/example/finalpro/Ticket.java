@@ -5,8 +5,13 @@ import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Ticket implements Serializable {
     private static final long serialVersionUID = 7526472295622776147L;  // unique id
@@ -14,11 +19,11 @@ public class Ticket implements Serializable {
     @Getter
     @Setter(AccessLevel.PRIVATE)
     @NonNull
-    private LocalDate purchaseDate;
+    private LocalDateTime purchaseDate;
     @Getter
     @Setter(AccessLevel.PRIVATE)
     @NonNull
-    private LocalDate screeningDate;
+    private LocalDateTime screeningDate;
     @Getter
     @Setter(AccessLevel.PRIVATE)
     @NonNull
@@ -44,7 +49,10 @@ public class Ticket implements Serializable {
     @Setter
     private static double ticketPrice = 15;
 
-    public Ticket(@NonNull LocalDate purchaseDate, @NonNull LocalDate screeningDate, @NonNull int roomNumber, @NonNull double price, @NonNull Movie movie) {
+    @Getter
+    private static List<Ticket> ticketList = new ArrayList<>();
+
+    public Ticket(@NonNull LocalDateTime purchaseDate, @NonNull LocalDateTime screeningDate, @NonNull int roomNumber, @NonNull double price, @NonNull Movie movie) {
         setPurchaseDate(purchaseDate);
         setRoomNumber(roomNumber);
         setPrice(price);
@@ -64,6 +72,10 @@ public class Ticket implements Serializable {
             reservation.removeTicketFromReservation(this);
             reservation = null;
         }
+    }
+
+    public static void readFromTicketList(ObjectInputStream ois) throws IOException, ClassNotFoundException {
+        ticketList = (List<Ticket>) ois.readObject();
     }
 
 

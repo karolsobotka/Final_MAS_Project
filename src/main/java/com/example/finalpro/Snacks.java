@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +24,8 @@ public class Snacks implements Serializable {
     @NonNull
     private double snackPrice;
 
-    private List<Snacks> snackList = new ArrayList<>();
+    @Getter
+    private static List<Snacks> snackList = new ArrayList<>();
 
     public Snacks(String name, double price) {
         setSnackName(name);
@@ -42,6 +45,10 @@ public class Snacks implements Serializable {
             if (snackList.get(i).getSnackName() == snackName)
                 snackList.remove(i);
         }
+    }
+
+    public static void readFromSnacksList(ObjectInputStream ois) throws IOException, ClassNotFoundException {
+        snackList = (List<Snacks>) ois.readObject();
     }
 
 }

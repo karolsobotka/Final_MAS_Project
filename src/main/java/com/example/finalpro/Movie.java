@@ -69,8 +69,12 @@ public class Movie implements Serializable {
     }
 
 
-    public void deleteMovie(){
-
+    public void deleteMovie(Movie movie) throws Exception {
+        if(movieList.contains(movie)){
+            movieList.remove(movie);
+        }
+        else
+            throw new Exception("There is no such movie");
     }
 
 

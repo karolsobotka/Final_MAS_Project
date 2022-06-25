@@ -9,10 +9,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-
+import lombok.Getter;
 import java.io.IOException;
 import java.net.URL;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ResourceBundle;
 
 public class ReservationController implements Initializable {
@@ -37,16 +37,31 @@ public class ReservationController implements Initializable {
 
     @FXML
     private TextField title;
-
+    @Getter
     private static Reservation newReservation = new Reservation(ScreeningController.getSelectedScreening(),
-                                                new RegisteredClient("imie", "nazwisko", LocalDate.parse("1999-02-03")),
+                                                Main.client,
                                                 ReservationState.AVAILABLE.toString());
+    private Ticket ticket;
     @FXML
-    void reserveButtonHandler(){
+    void reserveButtonHandler() {
+        new Thread(()->{
+            ticket = new Ticket(
+                    LocalDateTime.now(),
+                    ScreeningController.getSelectedScreening().getScreeningDate(),
+                    ScreeningController.getSelectedScreening().getRoomNumber(),
+                    Ticket.getTicketPrice(),
+                    ScreeningController.getSelectedScreening().getMovie());
 
-        reserveScreening.setOnAction(e ->{
+            reserveScreening.setOnAction(e -> {
+                newReservation.addTicketToReservation(ticket);
+                try {
+                    ScreeningController.getSelectedScreening().addTicketToScreening(ticket);
+                } catch (Exception ex) {
+                    throw new RuntimeException(ex);
+                }
 
                 try {
+
                     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("reservation_pay-view.fxml"));
 
                     Parent root1 = fxmlLoader.load();
@@ -58,8 +73,12 @@ public class ReservationController implements Initializable {
                 } catch (IOException exeption) {
                     throw new RuntimeException(exeption);
                 }
-        });
+            });
+        }).start();
+
     }
+
+
 
 
     @Override
@@ -71,5 +90,9 @@ public class ReservationController implements Initializable {
         dateOfScreening.setText(ScreeningController.getSelectedScreening().getScreeningDate().toString());
         roomNo.setText(""+ScreeningController.getSelectedScreening().getRoomNumber());
         ticketPrice.setText(Ticket.getTicketPrice()+"zł");
+
+        new Thread(()->{
+            newReservation.deleteUnpaidReservation();
+        }).start();
     }
 }

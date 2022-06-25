@@ -37,25 +37,30 @@ public class MovieController implements Initializable {
 
     @FXML
     void handleButtonAction() {
-        selectedMovie = table.getSelectionModel().getSelectedItem();
 
-        chooseMovieButton.setOnAction(actionEvent -> {
-            try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("screening-list.fxml"));
+        new Thread(()->{
 
-                Parent root1 = fxmlLoader.load();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root1));
-                stage.show();
+            selectedMovie = table.getSelectionModel().getSelectedItem();
 
+            chooseMovieButton.setOnAction(actionEvent -> {
+                        try {
+                            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("screening-list.fxml"));
 
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+                            Parent root1 = fxmlLoader.load();
+                            Stage stage = new Stage();
+                            stage.setScene(new Scene(root1));
+                            stage.show();
 
 
-        }
-        );
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
+
+
+                    }
+            );
+        }).start();
+
     }
 
     ObservableList<Movie> list = FXCollections.observableArrayList(Movie.getMovieList());

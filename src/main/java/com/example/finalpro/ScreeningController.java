@@ -45,7 +45,9 @@ public class ScreeningController implements Initializable {
 
     @FXML
     void handleButtonAction() {
-        selectedScreening = screeningTable.getSelectionModel().getSelectedItem();
+        new Thread(()->{
+            selectedScreening = screeningTable.getSelectionModel().getSelectedItem();
+        }).start();
 
         screeningButton.setOnAction(actionEvent -> {
 

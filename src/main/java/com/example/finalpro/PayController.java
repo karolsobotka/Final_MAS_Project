@@ -22,20 +22,32 @@ public class PayController implements Initializable {
 
     @FXML
     void reserveButtonHandler(){
-        button.setOnAction(e ->{
-            try {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("reservation-confirmed.fxml"));
+        new Thread(()->{
+            button.setOnAction(e ->{
 
-                Parent root1 = fxmlLoader.load();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root1));
-                stage.show();
+                if(comboBox.getValue().equals("Zwykła rezerwacja")){
+                    ReservationController.getNewReservation().reserveScreening();
 
 
-            } catch (IOException exeption) {
-                throw new RuntimeException(exeption);
-            }
-        });
+                }
+                if(comboBox.getValue().equals("Natychmiastowa opłata")){
+                    ReservationController.getNewReservation().reserveAndPayForScreening();
+                }
+                try {
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("reservation-confirmed.fxml"));
+
+                    Parent root1 = fxmlLoader.load();
+                    Stage stage = new Stage();
+                    stage.setScene(new Scene(root1));
+                    stage.show();
+
+
+                } catch (IOException exeption) {
+                    throw new RuntimeException(exeption);
+                }
+            });
+        }).start();
+
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

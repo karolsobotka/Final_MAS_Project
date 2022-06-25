@@ -8,9 +8,14 @@ import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAmount;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,7 +37,7 @@ public class Reservation implements Serializable {
     @NonNull
     private String state;
 
-    private LocalDate reservationTime;
+    private LocalDateTime reservationTime;
 
     private List<Ticket> ticketsList = new ArrayList<>();
     @Getter
@@ -41,6 +46,8 @@ public class Reservation implements Serializable {
     @Getter
     private List<Snacks> snacksList = new ArrayList<>();
 
+    @Getter
+    private static List<Reservation> reservationList = new ArrayList<>();
 
     public Reservation(Screening screening, Client client, String state){
         setScreening(screening);
@@ -48,10 +55,16 @@ public class Reservation implements Serializable {
         setState(state);
         setReservationTime();
 
+        reservationList.add(this);
+
+    }
+
+    public static void readFromReservationList(ObjectInputStream ois) throws IOException, ClassNotFoundException {
+            reservationList = (List<Reservation>) ois.readObject();
     }
 
     private void setReservationTime() {
-        reservationTime = LocalDate.parse(LocalDate.now()+" "+ LocalTime.now());
+        reservationTime = LocalDateTime.now();
     }
 
     public void addClient(Client client){
@@ -80,16 +93,16 @@ public class Reservation implements Serializable {
         }
     }
 
-    private void deleteUnpaidReservation(){
-            // if(screening time < LocalTime - 15 minutes  )
-        // remooveTicketFromReservation(ticket???);
+    public  void deleteUnpaidReservation(){
+             if(screening.getScreeningDate().isAfter(LocalDateTime.now().minus(15, ChronoUnit.MINUTES)));
+                 removeTicketFromReservation(this.ticketsList.get(0));
     }
 
     public void reserveScreening(){
-
+        this.state = ""+ReservationState.RESERVED;
     }
     public void reserveAndPayForScreening(){
-
+        this.state = ""+ReservationState.PAID;
     }
 
     public void addTicketToReservation(Ticket ticket) {

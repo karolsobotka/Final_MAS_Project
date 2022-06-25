@@ -12,6 +12,11 @@ public class ExtensionsSaveState {
 
                 Person.readFromPersonsList(ois);
                 Movie.readFromMovieList(ois);
+                Ticket.readFromTicketList(ois);
+                Snacks.readFromSnacksList(ois);
+                MovieMarathon.readFromMovieMarathonList(ois);
+                Reservation.readFromReservationList(ois);
+                Screening.readFromScreeningList(ois);
 
             } catch(IOException e) {
                 System.err.println(e);
@@ -28,6 +33,12 @@ public class ExtensionsSaveState {
 
             oos.writeObject(Person.getPersonsList());
             oos.writeObject(Movie.getMovieList());
+            oos.writeObject(Ticket.getTicketList());
+            oos.writeObject(Reservation.getReservationList());
+            oos.writeObject(Snacks.getSnackList());
+            oos.writeObject(MovieMarathon.getMovieMarathonList());
+            oos.writeObject(Screening.getScreeningList());
+
 
 
         } catch(IOException e) {
