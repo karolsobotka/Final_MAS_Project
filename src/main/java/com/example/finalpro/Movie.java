@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -59,6 +61,11 @@ public class Movie implements Serializable {
         }
         else
             movieList.add(movie);
+    }
+
+    public static void readFromMovieList(ObjectInputStream ois) throws IOException, ClassNotFoundException {
+        movieList = (List<Movie>) ois.readObject();
+
     }
 
 

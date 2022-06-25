@@ -7,6 +7,8 @@ import lombok.Setter;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Screening implements Serializable {
     private static final long serialVersionUID = 7526472295622776147L;  // unique id
@@ -24,6 +26,8 @@ public class Screening implements Serializable {
     @Setter
     @NonNull
     private int roomNumber;
+
+    private List<Ticket> ticketsList = new ArrayList<>();
 
 
     public Screening(LocalDate screeningDate, Movie movie, int room) {

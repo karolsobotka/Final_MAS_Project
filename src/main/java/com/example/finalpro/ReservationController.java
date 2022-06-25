@@ -9,12 +9,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 public class ReservationController implements Initializable {
@@ -45,9 +44,15 @@ public class ReservationController implements Initializable {
     @FXML
     private TextField title;
 
+    private static Reservation newReservation = new Reservation(ScreeningController.getSelectedScreening(),
+                                                new RegisteredClient("imie", "nazwisko", LocalDate.parse("1999-02-03")),
+                                                ReservationState.AVAILABLE.toString());
     @FXML
     void reserveButtonHandler(){
+
         reserveScreening.setOnAction(e ->{
+
+
                 try {
                     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("pay-view.fxml"));
 
@@ -66,10 +71,11 @@ public class ReservationController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        title.setText(MovieController.getSelectedMovie().getName());
         availableChairsCount.setText("5");
-        dateOfScreening.setText("18.06.2022");
-        roomNo.setText("1");
-        ticketPrice.setText("15zł");
+        dateOfScreening.setText(ScreeningController.getSelectedScreening().getScreeningDate().toString());
+        roomNo.setText(""+ScreeningController.getSelectedScreening().getRoomNumber());
+        ticketPrice.setText(""+Ticket.getTicketPrice());
         listOfAvailableChairs.getItems().addAll("1","2", "3", "15","18");
     }
 }

@@ -4,31 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8bc4544f-48c1-4a5d-9c51-140e553c5692" name="Changes" comment="Added all attributes to the classes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/ExtensionsSaveState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/ScreeningController.java" afterDir="false" />
+    <list default="true" id="8bc4544f-48c1-4a5d-9c51-140e553c5692" name="Changes" comment="further Changes">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/finalpro/screening-list.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/state.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/ExtensionsSaveState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/ExtensionsSaveState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Manger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Manger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/MovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/MovieMarathon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/MovieMarathon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Owner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/RegisteredClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/RegisteredClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Reservation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/ReservationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Screening.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Screening.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Snacks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Snacks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/ScreeningController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/ScreeningController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/UnregisteredClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/UnregisteredClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Posters/fightClub.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/finalpro/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/finalpro/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/finalpro/reservation-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/finalpro/reservation-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +64,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\WIN\Desktop\MAS\PROJEKT\FINAL\src\main\resources\com\example\finalpro" />
       <recent name="C:\Users\WIN\Desktop\MAS\PROJEKT\FINAL\src\main\resources\com\example\finalpro\screening" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -110,7 +101,7 @@
       <updated>1654885554299</updated>
       <workItem from="1654885556191" duration="11982000" />
       <workItem from="1654905123226" duration="57000" />
-      <workItem from="1655828546736" duration="28919000" />
+      <workItem from="1655828546736" duration="36092000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit for Final Project for MAS classes.">
       <created>1654893447997</created>
@@ -147,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656021473937</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="further Changes">
+      <created>1656144230501</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1656144230501</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +167,7 @@
     <MESSAGE value="commit to sync up full progress" />
     <MESSAGE value="Adding all classes and assosiations between them still WIP" />
     <MESSAGE value="Added all attributes to the classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added all attributes to the classes" />
+    <MESSAGE value="further Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="further Changes" />
   </component>
 </project>
