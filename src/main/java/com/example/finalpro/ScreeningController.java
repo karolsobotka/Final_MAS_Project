@@ -7,14 +7,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import lombok.Getter;
-
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
@@ -36,6 +31,10 @@ public class ScreeningController implements Initializable {
 
 
 
+
+
+
+
     private static Screening selectedScreening;
     @FXML
     private Label titleLabel;
@@ -51,7 +50,7 @@ public class ScreeningController implements Initializable {
         screeningButton.setOnAction(actionEvent -> {
 
             try {
-                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("reservation-view.fxml"));
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("screening_info-view.fxml"));
 
                         Parent root1 = fxmlLoader.load();
                         Stage stage = new Stage();
@@ -77,7 +76,6 @@ public class ScreeningController implements Initializable {
             titleLabel.setText(MovieController.getSelectedMovie().getName());
             roomNumber.setCellValueFactory(new PropertyValueFactory<>("roomNumber"));
             screeningDate.setCellValueFactory(new PropertyValueFactory<>("screeningDate"));
-
             screeningTable.setItems(list);
 
     }

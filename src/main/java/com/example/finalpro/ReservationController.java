@@ -1,14 +1,12 @@
 package com.example.finalpro;
 
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -40,6 +38,8 @@ public class ReservationController implements Initializable {
 
     @FXML
     private TextField ticketPrice;
+    @FXML
+    private ComboBox<Integer> sitCountComboBox;
 
     @FXML
     private TextField title;
@@ -54,7 +54,7 @@ public class ReservationController implements Initializable {
 
 
                 try {
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("pay-view.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("reservation_pay-view.fxml"));
 
                     Parent root1 = fxmlLoader.load();
                     Stage stage = new Stage();
@@ -73,9 +73,11 @@ public class ReservationController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         title.setText(MovieController.getSelectedMovie().getName());
         availableChairsCount.setText("5");
+        sitCountComboBox = new ComboBox(FXCollections.observableArrayList(1,2,3));
         dateOfScreening.setText(ScreeningController.getSelectedScreening().getScreeningDate().toString());
-        roomNo.setText(""+ScreeningController.getSelectedScreening().getRoomNumber());
-        ticketPrice.setText(""+Ticket.getTicketPrice());
+        roomNo.setText("Sala nr: "+ScreeningController.getSelectedScreening().getRoomNumber());
+        ticketPrice.setText(Ticket.getTicketPrice()+"zł");
         listOfAvailableChairs.getItems().addAll("1","2", "3", "15","18");
+        listOfAvailableChairs.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
     }
 }

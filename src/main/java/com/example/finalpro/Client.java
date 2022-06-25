@@ -24,7 +24,7 @@ public abstract class Client extends Person {
 
     public Client(String firstName, String lastName, LocalDate birthDate) {
         super(firstName, lastName, birthDate);
-        setId((int) Math.random()*9999 + 9999);
+        setId((int) Math.random()* 9999 + 9999);
     }
     public Client(String firstName, String lastName, LocalDate birthDate,String email) {
         super(firstName, lastName, birthDate);
