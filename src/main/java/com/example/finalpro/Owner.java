@@ -10,14 +10,19 @@ public class Owner extends Person {
         super(firstName, lastName, birthDate);
     }
 
-    public void hireEmployee(){
+    public void hireEmployee(String firstName, String lastName, LocalDate birthDate, String address, int seniority){
+        Employee e = new Employee(firstName, lastName, birthDate,address, seniority );
 
     }
-    public void fireEmployee(){
-
+    public void fireEmployee(Employee e){
+        for (Employee emp: Employee.getEmployeesList()) {
+            if(emp == e){
+                Employee.getEmployeesList().remove(emp);
+            }
+        }
     }
-    public void promoteEmployee(){
-
+    public void promoteEmployee(Employee e){
+        e.setEmpType(EmployeeType.MANAGER);
     }
 
 }

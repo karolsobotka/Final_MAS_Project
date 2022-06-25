@@ -13,9 +13,11 @@ public class UnregisteredClient extends Client {
 
     public UnregisteredClient(String firstName, String lastName, LocalDate birthDate) {
         super(firstName, lastName, birthDate);
+        super.getClientMap().put(super.getId(), this);
     }
     public UnregisteredClient(String firstName, String lastName, LocalDate birthDate, int phoneNumber) throws Exception {
         super(firstName, lastName, birthDate);
+        super.getClientMap().put(super.getId(), this);
         setPhoneNumber(phoneNumber);
     }
 

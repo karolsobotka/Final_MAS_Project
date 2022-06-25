@@ -8,6 +8,7 @@ import lombok.Setter;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Screening implements Serializable {
@@ -26,7 +27,6 @@ public class Screening implements Serializable {
     @Setter
     @NonNull
     private int roomNumber;
-
     private List<Ticket> ticketsList = new ArrayList<>();
 
 
@@ -35,6 +35,20 @@ public class Screening implements Serializable {
         setMovie(movie);
         setRoomNumber(room);
         movie.getScreeningList().add(this);
+    }
+
+    public void addTicketToScreening(Ticket ticket){
+        if(!ticketsList.contains(ticket)){
+            ticketsList.add(ticket);
+        }
+
+    }
+
+    public void removeTicketFromScreening(Ticket ticket){
+        if (ticketsList.contains(ticket)) {
+            ticketsList.remove(ticket);
+           // zajecia.removeKlasaNauczyciel();
+        }
     }
 
 

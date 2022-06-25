@@ -1,6 +1,7 @@
 package com.example.finalpro;
 
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -20,12 +21,7 @@ public class ReservationController implements Initializable {
     private TextField availableChairsCount;
 
     @FXML
-    private ChoiceBox<String> comboBox;
-
-    @FXML
     private TextField dateOfScreening;
-
-
 
     @FXML
     private ListView<String> listOfAvailableChairs;
@@ -38,8 +34,6 @@ public class ReservationController implements Initializable {
 
     @FXML
     private TextField ticketPrice;
-    @FXML
-    private ComboBox<Integer> sitCountComboBox;
 
     @FXML
     private TextField title;
@@ -51,7 +45,6 @@ public class ReservationController implements Initializable {
     void reserveButtonHandler(){
 
         reserveScreening.setOnAction(e ->{
-
 
                 try {
                     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("reservation_pay-view.fxml"));
@@ -72,12 +65,11 @@ public class ReservationController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         title.setText(MovieController.getSelectedMovie().getName());
-        availableChairsCount.setText("5");
-        sitCountComboBox = new ComboBox(FXCollections.observableArrayList(1,2,3));
-        dateOfScreening.setText(ScreeningController.getSelectedScreening().getScreeningDate().toString());
-        roomNo.setText("Sala nr: "+ScreeningController.getSelectedScreening().getRoomNumber());
-        ticketPrice.setText(Ticket.getTicketPrice()+"zł");
-        listOfAvailableChairs.getItems().addAll("1","2", "3", "15","18");
         listOfAvailableChairs.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        listOfAvailableChairs.getItems().addAll("1","2","3","4","5","6","7","8","9","10");
+        availableChairsCount.setText(""+listOfAvailableChairs.getItems().size());
+        dateOfScreening.setText(ScreeningController.getSelectedScreening().getScreeningDate().toString());
+        roomNo.setText(""+ScreeningController.getSelectedScreening().getRoomNumber());
+        ticketPrice.setText(Ticket.getTicketPrice()+"zł");
     }
 }

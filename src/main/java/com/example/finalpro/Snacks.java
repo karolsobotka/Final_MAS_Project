@@ -37,8 +37,11 @@ public class Snacks implements Serializable {
         snackList.add(new Snacks(snackName, price));
     }
 
-    public void removeSnack(String snackName){
-
+    public void removeSnack(String snackName) {
+        for (var i = 0; i < snackList.size(); i++) {
+            if (snackList.get(i).getSnackName() == snackName)
+                snackList.remove(i);
+        }
     }
 
 }

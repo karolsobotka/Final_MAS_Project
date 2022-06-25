@@ -4,13 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8bc4544f-48c1-4a5d-9c51-140e553c5692" name="Changes" comment="View for my use case has been completed.">
+    <list default="true" id="8bc4544f-48c1-4a5d-9c51-140e553c5692" name="Changes" comment="further changes to logic">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/EmployeeType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/MovieMarathon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/MovieMarathon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Owner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/RegisteredClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/RegisteredClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Reservation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/ReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/ScreeningController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/ScreeningController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/finalpro/pay-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/finalpro/reservation_pay-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/finalpro/reservation-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/finalpro/screening_info-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Screening.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Screening.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Snacks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Snacks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalpro/UnregisteredClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalpro/UnregisteredClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/finalpro/screening_info-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/finalpro/screening_info-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +30,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -44,6 +53,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/WIN/Desktop/MP2",
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.37011495"
@@ -93,7 +103,7 @@
       <updated>1654885554299</updated>
       <workItem from="1654885556191" duration="11982000" />
       <workItem from="1654905123226" duration="57000" />
-      <workItem from="1655828546736" duration="38457000" />
+      <workItem from="1655828546736" duration="46398000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit for Final Project for MAS classes.">
       <created>1654893447997</created>
@@ -144,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656153074518</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="further changes to logic">
+      <created>1656157351878</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1656157351878</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +185,7 @@
     <MESSAGE value="Added all attributes to the classes" />
     <MESSAGE value="further Changes" />
     <MESSAGE value="View for my use case has been completed." />
-    <option name="LAST_COMMIT_MESSAGE" value="View for my use case has been completed." />
+    <MESSAGE value="further changes to logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="further changes to logic" />
   </component>
 </project>

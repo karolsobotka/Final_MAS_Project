@@ -31,7 +31,6 @@ public class Ticket implements Serializable {
     @Setter(AccessLevel.PRIVATE)
     @NonNull
     private Movie movie;
-
     @Getter
     @Setter(AccessLevel.PRIVATE)
     @NonNull
@@ -39,7 +38,7 @@ public class Ticket implements Serializable {
     @Getter
     @Setter(AccessLevel.PRIVATE)
     @NonNull
-    private Reservation reservation;;
+    private Reservation reservation;
 
     @Getter
     @Setter
@@ -53,5 +52,19 @@ public class Ticket implements Serializable {
         setScreening(ScreeningController.getSelectedScreening());
         //setReservation();
     }
+    public void removeScreeningReservation() {
+        if(screening == null && reservation == null){
+            return;
+        }
+        if(screening != null){
+            screening.removeTicketFromScreening(this);
+            screening = null;
+        }
+        if(reservation != null){
+            reservation.removeTicketFromReservation(this);
+            reservation = null;
+        }
+    }
+
 
 }

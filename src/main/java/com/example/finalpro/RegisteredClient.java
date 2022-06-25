@@ -16,11 +16,16 @@ public class RegisteredClient extends Client{
     @NonNull
     private long creditCardNumber;
 
+
+
     public RegisteredClient(String firstName, String lastName, LocalDate birthDate) {
         super(firstName, lastName, birthDate);
+        super.getClientMap().put(super.getId(), this);
+
     }
     public RegisteredClient(String firstName, String lastName, LocalDate birthDate, long creditCardNumber) {
         super(firstName, lastName, birthDate);
         setCreditCardNumber(creditCardNumber);
+        super.getClientMap().put(super.getId(), this);
     }
 }
