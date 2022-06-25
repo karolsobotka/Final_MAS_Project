@@ -1,5 +1,7 @@
 package com.example.finalpro;
 
-public class MovieMarathon {
+import java.io.Serializable;
+
+public class MovieMarathon implements Serializable {
 
 }

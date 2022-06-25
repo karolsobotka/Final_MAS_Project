@@ -24,12 +24,12 @@
             <TableView fx:id="table" layoutX="15.0" layoutY="41.0" prefHeight="462.0" prefWidth="623.0">
                <columns>
                   <TableColumn fx:id="name" prefWidth="247.0" text="Tytuł" />
-                  <TableColumn prefWidth="205.0" text="Reżyser" />
-                  <TableColumn prefWidth="91.0" text="Rok premiery" />
-                  <TableColumn prefWidth="78.0" text="Długość" />
+                  <TableColumn fx:id="director" prefWidth="205.0" text="Reżyser" />
+                  <TableColumn fx:id="releaseYear" prefWidth="91.0" text="Rok premiery" />
+                  <TableColumn fx:id="videoLength" prefWidth="78.0" text="Długość" />
                </columns>
             </TableView>
-            <Button layoutX="504.0" layoutY="517.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Wybierz Film" />
+            <Button fx:id="chooseMovieButton" layoutX="504.0" layoutY="517.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="112.0" text="Wybierz Film" />
          </children>
       </AnchorPane>
    </center>

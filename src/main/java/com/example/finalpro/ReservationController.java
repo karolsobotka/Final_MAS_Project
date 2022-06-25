@@ -28,8 +28,7 @@ public class ReservationController implements Initializable {
     @FXML
     private TextField dateOfScreening;
 
-    @FXML
-    private ImageView imgArea;
+
 
     @FXML
     private ListView<String> listOfAvailableChairs;
@@ -69,7 +68,6 @@ public class ReservationController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         availableChairsCount.setText("5");
         dateOfScreening.setText("18.06.2022");
-        imgArea.setImage(new Image("C:\\Users\\WIN\\Desktop\\MAS\\PROJEKT\\FINAL\\src\\main\\resources\\Posters\\fightClub.jpg"));
         roomNo.setText("1");
         ticketPrice.setText("15zł");
         listOfAvailableChairs.getItems().addAll("1","2", "3", "15","18");

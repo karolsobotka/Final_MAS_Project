@@ -7,6 +7,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -17,16 +20,28 @@ import java.util.ResourceBundle;
 public class MovieController implements Initializable {
 
 
+    @FXML
+    private TableView<Movie> table;
+    @FXML
+    private TableColumn<Movie, String> name;
+    @FXML
+    private TableColumn<Movie, String> director;
+    @FXML
+    private TableColumn<Movie, Integer> releaseYear;
+    @FXML
+    private TableColumn<Movie, Integer> videoLength;
 
-
-
+    private static Movie selectedMovie;
+    @FXML
+    private Button chooseMovieButton;
 
     @FXML
     void handleButtonAction() {
+        selectedMovie = table.getSelectionModel().getSelectedItem();
+
         chooseMovieButton.setOnAction(actionEvent -> {
-            selectedScreening = table.getSelectionModel().getSelectedItem();
             try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("reservation-view.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("screening-list.fxml"));
 
                 Parent root1 = fxmlLoader.load();
                 Stage stage = new Stage();
@@ -39,29 +54,23 @@ public class MovieController implements Initializable {
             }
 
 
-        });
+        }
+        );
     }
 
-    ObservableList<Movie> list = FXCollections.observableArrayList(
-            new Movie("Fight Club", "David Fincher", 139,1999),
-            new Movie("Fight Club", "David Fincher", 139,1999),
-            new Movie("Fight Club", "David Fincher", 139,1999),
-            new Movie("Fight Club", "David Fincher", 139,1999)
-    );
-
-
-
-
+    ObservableList<Movie> list = FXCollections.observableArrayList(Movie.getMovieList());
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         name.setCellValueFactory(new PropertyValueFactory<>("name"));
-        dateTo.setCellValueFactory(new PropertyValueFactory<>("dateTo"));
-        dateFrom.setCellValueFactory(new PropertyValueFactory<>("dateFrom"));
-        room.setCellValueFactory(new PropertyValueFactory<>("room"));
-        availability.setCellValueFactory(new PropertyValueFactory<>("availability"));
-
+        director.setCellValueFactory(new PropertyValueFactory<>("director"));
+        videoLength.setCellValueFactory(new PropertyValueFactory<>("videoLength"));
+        releaseYear.setCellValueFactory(new PropertyValueFactory<>("releaseYear"));
 
         table.setItems(list);
+    }
+
+    public static Movie getSelectedMovie() {
+        return selectedMovie;
     }
 }

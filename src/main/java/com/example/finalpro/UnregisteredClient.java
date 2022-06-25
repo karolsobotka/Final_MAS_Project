@@ -2,14 +2,12 @@ package com.example.finalpro;
 
 import lombok.Getter;
 import lombok.NonNull;
-import lombok.Setter;
 
 import java.time.LocalDate;
 
 public class UnregisteredClient extends Client {
 
     @Getter
-
     @NonNull
     private int phoneNumber;
 

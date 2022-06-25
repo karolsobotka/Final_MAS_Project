@@ -5,9 +5,12 @@ import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public abstract class Person {
+public abstract class Person implements Serializable {
+    private static final long serialVersionUID = 7526472295622776147L;  // unique id
+
     @Getter
     @NonNull
     @Setter(AccessLevel.PRIVATE)

@@ -6,4 +6,5 @@ module com.example.finalpro{
 
     opens com.example.finalpro to javafx.fxml;
         exports com.example.finalpro;
-        }
+
+}

@@ -5,10 +5,13 @@ import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Snacks {
+public class Snacks implements Serializable {
+
+    private static final long serialVersionUID = 7526472295622776147L;  // unique id
 
     @Getter
     @Setter(AccessLevel.PRIVATE)

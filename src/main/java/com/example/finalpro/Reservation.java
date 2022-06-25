@@ -1,6 +1,13 @@
 package com.example.finalpro;
 
-public class Reservation {
+import com.example.finalpro.Client;
+import com.example.finalpro.Screening;
+
+import java.io.Serializable;
+
+public class Reservation implements Serializable {
+    private static final long serialVersionUID = 7526472295622776147L;  // unique id
+
 
 
     private Screening screening;
